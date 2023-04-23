@@ -23,3 +23,15 @@
 ## docker build -t frontend .
 
 ## docker run --rm -d -p 3001:3000 frontend
+
+# 🍎 Add network
+
+## docker network ls
+
+## docker network create jobs-net
+
+## docker run -d --rm -p --network jobs-net backend
+
+## docker run --rm -d --network jobs-net frontend
+
+# 🍎 Docker compose section
