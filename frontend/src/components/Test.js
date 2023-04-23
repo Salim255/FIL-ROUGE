@@ -12,5 +12,9 @@ export default function Test() {
   useEffect(() => {
     dispatch(getMessage());
   }, [dispatch]);
-  return <div>{message}</div>;
+  return (
+    <main className="test">
+      <p className="test__container">{message}</p>
+    </main>
+  );
 }
