@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-app.get("/", function (req, res) {
+app.get("/test", function (req, res) {
   res.status(200).json({
     status: "success",
     message: "Hello world",
