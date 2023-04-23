@@ -2,7 +2,10 @@ version: "3.8"
 #Version of docker-compose specification
 services:
   postgres:
-
+    image: "postgres"
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: example
   backend:
 
   frontend:
