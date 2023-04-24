@@ -38,6 +38,8 @@
 
 ## 1\ Build Posgres container
 
-## 2\ Build frontend container
+## 2\ Build backend container
 
 ## run: docker logs <container name>
+
+## 3\ Build frontend container
