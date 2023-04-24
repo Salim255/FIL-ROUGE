@@ -4,8 +4,39 @@ services:
   postgres:
     image: "postgres"
     restart: always
-    environment:
-      POSTGRES_PASSWORD: example
+    volumes:
+      - data:/data/db
+    container_name: postgresdb
+    # environment:
+    env_file:
+      - ./env/db.env
   backend:
-
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    container_name: backend
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - postgres
   frontend:
+    build: ./frontend
+    ports:
+      - "3001:3000"
+    container_name: frontend
+    volumes:
+      - ./frontend/src:/app/src
+      #Bind
+    ## To tell docker-compose this container need to star in interactive mode
+    stdin_open: true
+    #To tell docker this container need to open input connection
+    tty: true
+    depends_on:
+      - backend
+volumes:
+  data:
+  logs:

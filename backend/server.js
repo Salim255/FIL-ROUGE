@@ -14,8 +14,10 @@ app.get("/test", function (req, res) {
 
   res.status(200).json({
     status: "success",
-    message: "Hello world, from Salim Fil Rouge",
+    message: `${process.env.DB_USERNAME} -> Hello world, from Salim Fil Rouge`,
   });
 });
 
-app.listen(3000);
+app.listen(3000, () => {
+  console.log("Server running on port 3000 🍎🍎", process.env.DB_USERNAME);
+});
