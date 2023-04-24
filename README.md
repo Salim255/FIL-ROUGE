@@ -35,3 +35,9 @@
 ## docker run --rm -d --network jobs-net frontend
 
 # 🍎 Docker compose section
+
+## 1\ Build Posgres container
+
+## 2\ Build frontend container
+
+## run: docker logs <container name>

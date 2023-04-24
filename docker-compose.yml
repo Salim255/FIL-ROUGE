@@ -9,8 +9,19 @@ services:
     # environment:
     env_file:
       - ./env/db.env
-  #backend:
-
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    volumes:
+      - logs:/app/logs
+      - ./backend:/app
+      - /app/node_modules
+    env_file:
+      - ./env/backend.env
+    depends_on:
+      - postgres
   #frontend:
 volumes:
   data:
+  logs:
