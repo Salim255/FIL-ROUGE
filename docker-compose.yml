@@ -4,8 +4,13 @@ services:
   postgres:
     image: "postgres"
     restart: always
-    environment:
-      POSTGRES_PASSWORD: example
-  backend:
+    volumes:
+      - data:/data/db
+    # environment:
+    env_file:
+      - ./env/db.env
+  #backend:
 
-  frontend:
+  #frontend:
+volumes:
+  data:
