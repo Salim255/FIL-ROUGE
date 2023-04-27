@@ -1,7 +1,19 @@
 const express = require("express");
-
+//pg is a nodejs modlues that allows us to connect and work with postgres
 const app = express();
+//We use pg to creat a connection over pool tool sever
+const pg = require("pg");
+const pool = new pg.Pool({
+  host: "postgres",
+  database: process.env.POSTGRES_DB,
+  user: process.env.DB_USERNAME, //The same username in docker compose postgres_user
+  password: process.env.POSTGRES_PASSWORD, //
+});
+//To test if the connection is stablished
 
+pool.query("SELECT 1 +1 ;").then((res) => console.log(res));
+
+//
 app.get("/test", function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Credentials", "true");
