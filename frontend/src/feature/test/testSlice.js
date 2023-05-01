@@ -7,7 +7,7 @@ const initialState = {
 
 export const getMessage = createAsyncThunk("message/getmessag", async () => {
   try {
-    const result = await customFetch.get("/test");
+    const result = await customFetch.get("/comment");
     return result.data;
   } catch (error) {
     console.log("====================================");

@@ -6,7 +6,8 @@ services:
     restart: always
     volumes:
       - data:/data/db
-    container_name: postgresdb
+    ports:
+      - 5432:5432
     # environment:
     env_file:
       - ./env/db.env
@@ -19,8 +20,11 @@ services:
       - ./backend:/app
       - /app/node_modules
     container_name: backend
+
     env_file:
       - ./env/backend.env
+
+    command: ["make", "migrateUP"]
     depends_on:
       - postgres
   frontend:
@@ -28,6 +32,7 @@ services:
     ports:
       - "3001:3000"
     container_name: frontend
+
     volumes:
       - ./frontend/src:/app/src
       #Bind

@@ -40,6 +40,16 @@
 
 ## 2\ Build backend container
 
-## run: docker logs <container name>
+## run: docker logs "container-name"
 
 ## 3\ Build frontend container
+
+## 🍎 Connect Server to Postgres DB
+
+### 1\ npm install node-pg-migrate pg
+
+## 🍎 Configure migration
+
+### 1\ npm run migrate create table comments
+
+### To run a container from inside docker-compose: docker-compose run --rm "container-name"
