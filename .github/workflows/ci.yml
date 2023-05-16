@@ -16,6 +16,7 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm ci
+        working-directory: ./frontend
       - run: npm test -- --coverage
         env:
           CI: true
