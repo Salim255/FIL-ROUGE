@@ -44,6 +44,6 @@ jobs:
         uses: actions/upload-artifact@v1
         with:
           name: build
-          path: build
+          path: ./frontend/build
       ##- uses: actions/download-artifact
       # - name: Deploy to docker image
