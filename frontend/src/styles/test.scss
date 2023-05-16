@@ -1,0 +1,14 @@
+.test {
+  display: flex;
+  height: 100vh;
+
+  &__container {
+    margin: auto;
+    font-size: 4rem;
+    font-weight: bold;
+    color: #ffff;
+    background: rgb(171, 49, 4);
+    padding: 3rem;
+    border-radius: 1rem;
+  }
+}
