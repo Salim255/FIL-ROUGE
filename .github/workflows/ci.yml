@@ -21,3 +21,8 @@ jobs:
         env:
           CI: true
         working-directory: ./frontend
+      - name: Build Project
+        if: github.event_name == 'push'
+        run: npm run build
+        working-directory: ./frontend
+      # - name: Deploy to docker image

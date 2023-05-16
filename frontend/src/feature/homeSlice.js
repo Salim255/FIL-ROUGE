@@ -1,4 +1,4 @@
-import { createSlice, createAsyncThunk, thunkAPI } from "@reduxjs/toolkit";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import customFetch from "../utils/axios";
 const initialState = {
   message: "",
