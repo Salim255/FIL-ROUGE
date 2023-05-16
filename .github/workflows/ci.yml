@@ -2,9 +2,9 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: ["main"]
+    branches: ["master"]
   pull_request:
-    branches: [main]
+    branches: [master]
 
 jobs:
   build:
@@ -15,7 +15,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: "12.x"
-      - run: npm CI
+      - run: npm ci
+        working-directory: ./frontend
       - run: npm test -- --coverage
         env:
           CI: true
+        working-directory: ./frontend
