@@ -53,3 +53,7 @@
 ### 1\ npm run migrate create table comments
 
 ### To run a container from inside docker-compose: docker-compose run --rm "container-name"
+
+## CI/CD Workflow
+
+### 1\ CI=true npm run test -- --coverage , to get coverage reports

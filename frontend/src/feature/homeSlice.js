@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk, thunkAPI } from "@reduxjs/toolkit";
-import customFetch from "../../utils/axios";
+import customFetch from "../utils/axios";
 const initialState = {
   message: "",
   isLoading: true,
