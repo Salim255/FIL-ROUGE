@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Cache node_modules
-        uses: actions/cashe@v1
+        uses: actions/cache@v1
         with:
           path: ~/.npm
           #To generate a key if there are change in package-lock file or change on the runner
