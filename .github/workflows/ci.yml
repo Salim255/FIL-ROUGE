@@ -17,7 +17,7 @@ jobs:
           path: ~/.npm
           #To generate a key if there are change in package-lock file or change on the runner
           key: ${{runner.os}}-mykey-${{hashFiles('**/package-lock.json')}}
-          restore-key: |
+          restore-keys: |
             ${{runner.os}}-mykey-
       - name: Use NodeJS
         uses: actions/setup-node@v1
