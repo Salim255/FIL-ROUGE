@@ -29,8 +29,20 @@ jobs:
         env:
           CI: true
         working-directory: ./frontend
+      - name: Upload Test coverage
+        uses: actions/upload-artifact@v1
+        with:
+          name: code-coverage
+          path: coverage
+
       - name: Build Project
         if: github.event_name == 'push'
         run: npm run build
         working-directory: ./frontend
+      - name: Upload Build Folder
+        uses: actions/upload-artifact@v1
+        with:
+          name: build
+          path: build
+      - uses: actions/download-artifact
       # - name: Deploy to docker image
