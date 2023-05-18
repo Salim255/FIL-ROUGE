@@ -1,4 +1,4 @@
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import FeedbackForm from "../components/FeedbackForm";
 describe("Test related to feedback Form", () => {
   test("On load condtion of form", () => {
@@ -30,5 +30,11 @@ describe("Test related to feedback Form", () => {
       name: "Add Feedback",
       exact: false,
     });
+    fireEvent.change(textbox, { target: { value: "Food was too spicy" } });
+    fireEvent.click(checkBox);
+    expect(btn).toBeEnabled();
+
+    fireEvent.click(checkBox); //it will uncheck the checkbox
+    expect(btn).toBeDisabled();
   });
 });
