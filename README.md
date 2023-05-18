@@ -1,3 +1,5 @@
+![](https://github.com/Salim255/FIL-ROUGE/workflows/CI/badge.svg?branch=develop&event=push)
+
 # FIL-ROUGE
 
 ## npm install express
