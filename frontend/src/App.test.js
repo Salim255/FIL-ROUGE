@@ -4,7 +4,7 @@ import App from "./App";
 //it("example, test two", () => {}); Same us test(...)
 test.skip("example test one", () => {
   render(<App />);
-  logRoles(screen.getByTestId("parent-container")); //we use this to get an element role
+  //logRoles(screen.getByTestId("parent-container")); //we use this to get an element role
 
   //Test whether button exist or not,
   //1 get the button
