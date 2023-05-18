@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.scss";
 import FeedbackForm from "./components/FeedbackForm";
 function App() {
