@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fronend-deployment
+
+##======The body of this deployment======
+spec:
+  replicas: 1
+
+  #The pod label we want to match with this deployment
+  selector:
+    matchLabels:
+      app: frontend
+
+  # Here we define the pod that should be created as part of this deployment
+  template:
+    metadata:
+      labels:
+        app: frontend
+    spec:
+      containers:
+        - name: frontend-node
+          image: crawan/kub-dep-auth

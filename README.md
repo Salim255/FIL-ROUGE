@@ -59,3 +59,9 @@
 ## CI/CD Workflow
 
 ### 1\ CI=true npm run test -- --coverage , to get coverage reports
+
+## 🍎 Kubernet
+
+### Local => minikube start
+
+### kubectl get all
