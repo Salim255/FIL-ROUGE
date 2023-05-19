@@ -45,6 +45,7 @@ jobs:
         with:
           name: build
           path: ./frontend/build
+
       ##========Docker section
       ## ======== Login to docker Hub =====
       - name: Login to Docker Hub
@@ -52,3 +53,17 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
+      ## ====== Build and push the fronend to Docker Hub ======
+      - name: Build and push the fronend to Docker Hub
+        uses: docker/build-push-action@v4
+        with:
+          context: ./frontend
+          push: true
+          tags: crawan/fontend:latest
+      ## ====== Build and push the backend to Docker Hub ======
+      - name: Build and push the backend to Docker Hub
+        uses: docker/build-push-action@v4
+        with:
+          context: ./backend
+          push: true
+          tags: crawan/backend:latest
