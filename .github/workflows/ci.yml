@@ -63,7 +63,7 @@ jobs:
         with:
           context: ./frontend
           push: true
-          tags: crawan/fontend:latest
+          tags: crawan/frontend:latest
       ## ====== Build and push the backend to Docker Hub ======
       - name: Build and push the backend to Docker Hub
         uses: docker/build-push-action@v4
