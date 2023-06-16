@@ -73,3 +73,7 @@
 ## docker run --publish 3000:3000 crawan/frontend
 
 ## minikube service fronend-service
+
+## kubectl get pods
+
+## kubectl delete deployment fronend-deployment
