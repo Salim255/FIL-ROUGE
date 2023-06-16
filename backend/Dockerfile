@@ -3,7 +3,7 @@ FROM node:14-alpine
 WORKDIR /app
 
 COPY package.json .
-COPY package-lock.son .
+COPY package-lock.json .
 COPY migrations .
 COPY Makefile .
 #RUN apk add --update  && apk add make
