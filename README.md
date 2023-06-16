@@ -77,3 +77,5 @@
 ## kubectl get pods
 
 ## kubectl delete deployment fronend-deployment
+
+## kubectl expose deployment fronend-service --type=LoadBalancer --port=3000
