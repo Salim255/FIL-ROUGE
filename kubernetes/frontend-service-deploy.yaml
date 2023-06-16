@@ -20,4 +20,20 @@ spec:
     spec:
       containers:
         - name: frontend-node
-          image: crawan/kub-dep-auth
+          image: crawan/frontend:latest
+
+---
+#Service section
+apiVersion: v1
+kind: Service
+metadata:
+  name: fronend-service
+spec:
+  ## Selecter identify which other resources should be connected to this resources, here we define which pod should be controlled by this service
+  selector:
+    app: frontend ## Coming from pod label in deployment
+  ports:
+    - protocol: "TCP"
+      port: 80
+      targetPort: 3000
+  type: LoadBalancer

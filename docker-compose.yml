@@ -11,6 +11,7 @@ services:
     # environment:
     env_file:
       - ./env/db.env
+
   backend:
     build: ./backend
     ports:
@@ -24,7 +25,7 @@ services:
     env_file:
       - ./env/backend.env
 
-    command: ["make", "migrateUP"]
+    #command: ["make", "migrateUP"]
     depends_on:
       - postgres
   frontend:

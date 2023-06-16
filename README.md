@@ -60,10 +60,20 @@
 
 ### 1\ CI=true npm run test -- --coverage , to get coverage reports
 
+## 🍎 Kubernetes
+
+### 🍌 Networking
+
 ## 🍎 Kubernet
 
 ### Local => minikube start
 
 ### kubectl get all
 
-##
+## docker run --publish 3000:3000 crawan/frontend
+
+## minikube service fronend-service
+
+## kubectl get pods
+
+## kubectl delete deployment fronend-deployment
