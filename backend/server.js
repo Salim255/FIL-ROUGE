@@ -6,13 +6,13 @@ const pg = require("pg");
 console.log("====================================");
 console.log("Server 🍎🩸🩸🩸");
 console.log("====================================");
-/* const pool = new pg.Pool({
+const pool = new pg.Pool({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   database: process.env.DB_DATABASE,
   user: process.env.DB_USERNAME, //The same username in docker compose postgres_user
   password: process.env.DB_PASSWORD, //
-}); */
+});
 
 //To test if the connection is stablished
 pool.query("SELECT 1 +1 ;").then((res) => console.log(res));
