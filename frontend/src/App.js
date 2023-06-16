@@ -1,5 +1,6 @@
 import "./App.scss";
 import FeedbackForm from "./components/FeedbackForm";
+import Home from "./components/Home";
 function App() {
   return (
     <div>
@@ -11,6 +12,7 @@ function App() {
         <li>laptop</li>
       </ul> */}
       <FeedbackForm />
+      <Home />
     </div>
   );
 }

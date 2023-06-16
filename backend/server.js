@@ -3,13 +3,16 @@ const express = require("express");
 const app = express();
 //We use pg to creat a connection over pool tool sever
 const pg = require("pg");
-const pool = new pg.Pool({
+console.log("====================================");
+console.log("Server 🍎🩸🩸🩸");
+console.log("====================================");
+/* const pool = new pg.Pool({
   host: process.env.DB_HOST,
   port: process.env.DB_PORT,
   database: process.env.DB_DATABASE,
   user: process.env.DB_USERNAME, //The same username in docker compose postgres_user
   password: process.env.DB_PASSWORD, //
-});
+}); */
 
 //To test if the connection is stablished
 pool.query("SELECT 1 +1 ;").then((res) => console.log(res));
@@ -22,7 +25,7 @@ pool.query("SELECT 1 +1 ;").then((res) => console.log(res));
 }); */
 //
 
-app.get("/comment", async (req, res) => {
+/* app.get("/comment", async (req, res) => {
   console.log("from comment 🍎🍎🍎");
   const { rows } = await pool.query(`SELECT * FROM comment`);
 
@@ -32,8 +35,8 @@ app.get("/comment", async (req, res) => {
     message: `${process.env.DB_USERNAME} -> Hello world, from Salim Fil Rouge`,
     data: rows,
   });
-});
-app.get("/test", function (req, res) {
+}); */
+/* app.get("/test", function (req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Allow-Credentials", "true");
   res.setHeader("Access-Control-Max-Age", "1800");
@@ -47,7 +50,7 @@ app.get("/test", function (req, res) {
     status: "success",
     message: `${process.env.DB_USERNAME} -> Hello world, from Salim Fil Rouge`,
   });
-});
+}); */
 
 app.listen(3000, () => {
   console.log("Server running on port 3000 🍎🍎", process.env.DB_USERNAME);

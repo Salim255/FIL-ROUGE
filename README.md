@@ -60,6 +60,10 @@
 
 ### 1\ CI=true npm run test -- --coverage , to get coverage reports
 
+## 🍎 Kubernetes
+
+### 🍌 Networking
+
 ## 🍎 Kubernet
 
 ### Local => minikube start
