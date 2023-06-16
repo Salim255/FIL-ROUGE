@@ -11,6 +11,7 @@ services:
     # environment:
     env_file:
       - ./env/db.env
+
   backend:
     build: ./backend
     ports:
